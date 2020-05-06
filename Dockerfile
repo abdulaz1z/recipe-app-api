@@ -1,7 +1,7 @@
 FROM python:3.7-alpine
 MAINTAINER Abdul Aziz   #  Maintainer of the project
 
-ENV PYTHONUNBUFFERED 1  #  Run python in unbuffered mode. Recommended when running Python within Docker containers
+ENV PYTHONUNBUFFERED 1
 
 #  Install dependencies
 COPY ./requirements.txt /requirements.txt
@@ -15,5 +15,3 @@ COPY ./app /app
 #  User to run the application using docker
 RUN adduser -D user
 USER user
-
-
